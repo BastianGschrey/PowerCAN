@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>VerticalBarGauge.qml</file>
+        <file>CreateVerticalGauge.js</file>
+        <file>dashBoard.qml</file>
+    </qresource>
+</RCC>
