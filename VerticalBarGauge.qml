@@ -1,7 +1,7 @@
 import QtQuick 2.8
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Extras 1.4
-
+import QtQml.Models 2.2
 
 Rectangle {
         id: rev
@@ -9,8 +9,6 @@ Rectangle {
         height: 80
         color: "transparent"
         antialiasing: false
-        anchors.left: parent.left
-        anchors.top: parent.top
         Drag.active: dragArea.drag.active
 
         MouseArea {
@@ -19,7 +17,7 @@ Rectangle {
                   height: parent.height + 10 // easier to get
                   anchors.centerIn: parent
                   drag.target: parent
-                  drag.axis: Drag.YAxis
+                  drag.axis: Drag.XAndYAxis
                 }
 
         Gauge {
@@ -57,3 +55,4 @@ Rectangle {
             }
       }
 }
+
