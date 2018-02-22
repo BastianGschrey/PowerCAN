@@ -3,8 +3,7 @@ import QtQuick.Controls.Styles 1.4
 import QtQuick.Extras 1.4
 
 
-
-    Rectangle {
+Rectangle {
         id: rev
         width: 100
         height: 80
@@ -12,8 +11,16 @@ import QtQuick.Extras 1.4
         antialiasing: false
         anchors.left: parent.left
         anchors.top: parent.top
+        Drag.active: dragArea.drag.active
 
-        Drag.active: parent.drag.active
+        MouseArea {
+                  id: dragArea
+                  width: parent.width
+                  height: parent.height + 10 // easier to get
+                  anchors.centerIn: parent
+                  drag.target: parent
+                  drag.axis: Drag.YAxis
+                }
 
         Gauge {
             id: revgauge
@@ -49,5 +56,4 @@ import QtQuick.Extras 1.4
                 }
             }
       }
-    }
-
+}

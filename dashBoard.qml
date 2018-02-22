@@ -1,6 +1,6 @@
 import QtQuick.Extras 1.4
 import QtQuick.Controls 1.4
-import QtQuick 2.7
+import QtQuick 2.8
 import "CreateVerticalGauge.js" as CreateVerticalGaugeScript
 
 Rectangle {
@@ -11,7 +11,10 @@ Rectangle {
     id: dashboard
     anchors.fill: parent
 
-
+    DropArea {
+        width: parent.width
+        height: parent.height
+    }
 
     MouseArea {
         id: touchArea
