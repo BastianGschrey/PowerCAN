@@ -3,6 +3,7 @@ import QtQuick.Controls.Styles 1.4
 import QtQuick.Extras 1.4
 import QtQml.Models 2.2
 
+
 Rectangle {
         id: rev
         width: 100
@@ -18,7 +19,12 @@ Rectangle {
                   anchors.centerIn: parent
                   drag.target: parent
                   drag.axis: Drag.XAndYAxis
+                  onClicked: pieMenu.popup(mouseX, mouseY), console.log("clicked")
                 }
+
+
+
+
 
         Gauge {
             id: revgauge
@@ -55,4 +61,3 @@ Rectangle {
             }
       }
 }
-

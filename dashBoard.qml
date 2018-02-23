@@ -39,10 +39,6 @@ Rectangle {
             text: "Add dial gauge"
             onTriggered: print("Action 3")
         }
-        MenuItem {
-            text: "Remove"
-            onTriggered: print("Action 4")
-        }
 
     }
 
